@@ -2,14 +2,14 @@
 %define upstream_version 1.03
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	%{upstream_version}
+Release:	6
 
 Summary:	Class-ArrayObjects module for perl 
 License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.bz2
+URL:		https://metacpan.org/dist/Class-ArrayObjects
+Source0:	https://cpan.metacpan.org/authors/id/R/RO/RONAN/Class-ArrayObjects-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
