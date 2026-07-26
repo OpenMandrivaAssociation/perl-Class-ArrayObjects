@@ -1,15 +1,13 @@
 %define upstream_name    Class-ArrayObjects
-%define upstream_version 1.03
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	6
+Version:	1.03
+Release:	7
 
 Summary:	Class-ArrayObjects module for perl 
 License:	GPL+ or Artistic
 Group:		Development/Perl
 URL:		https://metacpan.org/dist/Class-ArrayObjects
-Source0:	https://cpan.metacpan.org/authors/id/R/RO/RONAN/Class-ArrayObjects-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/R/RO/RONAN/Class-ArrayObjects-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -21,7 +19,7 @@ It's main goal is to allow one to create less memory hungry programs,
 notably in memory-sensitive contexts such as mod_perl.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 find . -type f -exec chmod 0644 {} \;
 
 %build
@@ -45,9 +43,7 @@ make test
 
 * Tue Jul 28 2009 Jérôme Quelin <jquelin@mandriva.org> 1.30.0-1mdv2011.0
 + Revision: 402281
-- rebuild using %%perl_convert_version
-
-* Fri Aug 08 2008 Thierry Vignaud <tv@mandriva.org> 1.03-2mdv2009.0
+- rebuild using %1.03 Fri Aug 08 2008 Thierry Vignaud <tv@mandriva.org> 1.03-2mdv2009.0
 + Revision: 268398
 - rebuild early 2009.0 package (before pixel changes)
 
